@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receita Secreta para Emagrecer Rápido</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --background: 0 0% 7%;
+      --foreground: 0 0% 98%;
+      --accent: 25 100% 50%;
+      --accent-hover: 25 100% 45%;
+      --secondary: 180 100% 40%;
+      --secondary-hover: 180 100% 35%;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, hsl(0, 0%, 7%), hsl(0, 0%, 10%));
+      color: hsl(0, 0%, 98%);
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+
+    .mt-4 {
+      margin-top: 1rem;
+    }
+
+    .section {
+      padding: 3rem 0;
+    }
+
+    .section-light {
+      background-color: hsl(0, 0%, 12%);
+    }
+
+    .section-dark {
+      background-color: hsl(0, 0%, 5%);
+    }
+
+    .btn-primary {
+      background-color: hsl(25, 100%, 50%);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.25rem;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background-color: hsl(25, 100%, 45%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    /* Estilos para o container de vídeo */
+    .video-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 2px solid #0e84b5;
+    }
+
+    .video-frame {
+      background-color: #000;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.2rem;
+    }
+
+    .viewer-count {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      /* position: absolute; */ /* Removido */
+      /* bottom: 20px; */       /* Removido */
+      /* left: 50%; */          /* Removido */
+      /* transform: translateX(-50%); */ /* Removido */
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      width: fit-content; /* Adicionado */
+      margin: 1rem auto 0; /* Adicionado margem superior e centralização horizontal */
+    }
+
+    .dot-pulse {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ff0000;
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0% {
+        opacity: 0.6;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0.6;
+      }
+    }
+
+    /* Estilos para os depoimentos */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial-card {
+      background-color: hsl(0, 0%, 12%);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-left: 4px solid hsl(180, 100%, 40%);
+    }
+
+    /* Estilos para os benefícios */
+    .benefits-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      margin: 1.5rem 0;
+      gap: 1rem;
+    }
+
+    .benefit-icon {
+      font-size: 2rem;
+      color: hsl(25, 100%, 50%);
+      flex-shrink: 0;
+    }
+
+    .benefit-content h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Estilos para o e-book */
+    .ebook-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .ebook-mockup {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .ebook-image-placeholder {
+      background-color: #333;
+      aspect-ratio: 3/4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+      color: #666;
+    }
+
+    .ebook-features {
+      flex: 1.5;
+      text-align: left;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .check-icon {
+      color: #4CAF50;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    /* Estilos para os bônus */
+    .bonus-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .bonus-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+    }
+
+    .bonus-icon {
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .bonus-content {
+      text-align: left;
+    }
+
+    .bonus-content h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Estilos para a garantia */
+    .guarantee-content {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .guarantee-seal {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #f1c40f;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      border: 3px solid #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .guarantee-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Estilos para o CTA final */
+    .final-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .arrow {
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .security-text {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Estilos para o FAQ */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      text-align: left;
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+    }
+
+    .faq-item h3 {
+      margin-bottom: 0.5rem;
+      color: hsl(25, 100%, 50%);
+    }
+
+    /* Estilos para o rodapé */
+    .footer-links {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-link {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    .footer-link:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .legal-text, .contact-info, .company-info {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Estilos para o contador */
+    .countdown {
+      font-size: 3rem;
+      font-weight: 700;
+      color: hsl(25, 100%, 50%);
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    /* Estilos para o pop-up de saída */
+    .exit-popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease-in-out;
+      display: none;
+    }
+
+    .exit-popup-container {
+      background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+      width: 90%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      position: relative;
+      border: 2px solid hsl(25, 100%, 50%);
+      overflow: hidden;
+    }
+
+    .exit-popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .exit-popup-content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .exit-popup-content h2 {
+      color: hsl(25, 100%, 50%);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .exit-popup-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .exit-popup-discount {
+      background-color: hsl(25, 100%, 50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1.5rem auto;
+      transform: rotate(-15deg);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      animation: pulse 2s infinite;
+    }
+
+    .discount-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .discount-text {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .exit-popup-cta {
+      background-color: hsl(25, 100%, 50%);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .exit-popup-cta:hover {
+      background-color: hsl(25, 100%, 45%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .exit-popup-timer {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 0.75rem;
+      }
+      
+      h1 {
+        font-size: 1.75rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .btn-primary {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+      
+      .countdown {
+        font-size: 2rem;
+      }
+
+      .ebook-content {
+        flex-direction: column;
+      }
+      
+      .ebook-mockup {
+        width: 80%;
+        margin: 0 auto;
+      }
+      
+      .ebook-features {
+        width: 100%;
+      }
+      
+      .bonus-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .bonus-content {
+        text-align: center;
+      }
+      
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .exit-popup-container {
+        width: 95%;
+      }
+      
+      .exit-popup-content h2 {
+        font-size: 2rem;
+      }
+      
+      .exit-popup-content h3 {
+        font-size: 1.2rem;
+      }
+      
+      .exit-popup-discount {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .discount-value {
+        font-size: 2rem;
+      }
+    }
+
+
+    /* Animações para Ícones */
+    .icon-animated {
+      display: inline-block; /* Para aplicar transformações */
+      vertical-align: middle; /* Alinhar com texto se necessário */
+    }
+
+    @keyframes icon-pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .icon-pulse {
+      animation: icon-pulse 1.5s infinite ease-in-out;
+    }
+
+    @keyframes icon-rotate {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(5deg) scale(1.05); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+
+    .icon-rotate {
+       animation: icon-rotate 2s infinite ease-in-out;
+    }
+
+    /* A animação 'bounce' já existe, podemos reutilizá-la ou ajustar se necessário */
+    .icon-bounce {
+        animation: bounce 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="App">
+    <!-- Header -->
+    <header class="section">
+      <div class="container">
+        <h1 class="text-center mb-4"><img src="1.png" alt="Alerta" class="icon-animated icon-pulse" style="width: 1em; height: 1em; vertical-align: -0.1em; margin-right: 0.2em;"> Assista Antes que Saia do Ar: Receita Revelada que Está Mudando Vidas de Mulheres no Brasil</h1>
+        <p class="text-center mb-8">Descubra como perder até 7kg em apenas 14 dias com uma receita caseira que está revolucionando o emagrecimento</p>
+      </div>
+    </header>
+
+    <!-- Seção de Vídeo -->
+    <section class="section">
+      <div class="container">
+        <div class="video-container">
+          <div class="video-frame">
+            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" src="https://www.youtube.com/embed/nTvXJdyNa8k?si=placeholder" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="viewer-count">
+            <span class="dot-pulse"></span> <span id="viewer-count">175</span> pessoas estão assistindo agora!
+          </div>
+      </div>
+    </section>
+
+    <!-- CTA Principal -->
+    <section class="section">
+      <div class="container text-center">
+        <a href="#" class="btn-primary pulse">QUERO ACESSAR A RECEITA AGORA!</a>
+        <p class="mt-2">Oferta por tempo limitado - 80% de desconto</p>
+        
+        <div class="countdown-container mt-4">
+          <p>Esta oferta expira em:</p>
+          <div class="countdown" id="countdown">10:00</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="section section-light">
+      <div class="container">
+        <h2 class="text-center mb-8">O que estão dizendo quem já experimentou a receita:</h2>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <h3>Maria S.</h3>
+            <p>"Incrível! Perdi 6,4kg em 13 dias seguindo esta receita. Minha vida mudou completamente!"</p>
+          </div>
+          
+          <div class="testimonial-card">
+            <h3>João P.</h3>
+            <p>"Finalmente algo que funciona de verdade, sem enrolação. Perdi 5,2kg e minha disposição melhorou 100%!"</p>
+          </div>
+          
+          <div class="testimonial-card">
+            <h3>Ana L.</h3>
+            <p>"Estava cética no início, mas a Receita Secreta superou todas as minhas expectativas. Perdi 7kg em 15 dias. Obrigada!"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-8">Por que a Receita Secreta funciona quando nada mais funcionou:</h2>
+        
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="8.png" alt="Natural" class="icon-animated icon-pulse" style="width: 32px; height: 32px; vertical-align: middle;"></div>
+            <div class="benefit-content">
+              <h3>100% Natural e sem contraindicações</h3>
+              <p>Ingredientes naturais que trabalham em sinergia para acelerar seu metabolismo</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="5.png" alt="Rápido" class="icon-animated icon-pulse" style="width: 32px; height: 32px; vertical-align: middle;"></div>
+            <div class="benefit-content">
+              <h3>Perda rápida e visível de peso</h3>
+              <p>Resultados visíveis já nos primeiros 3 dias de uso</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="7.png" alt="Casa" class="icon-animated icon-rotate" style="width: 32px; height: 32px; vertical-align: middle;"></div>
+            <div class="benefit-content">
+              <h3>Não precisa de academia</h3>
+              <p>Funciona mesmo sem exercícios físicos intensos</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="9.png" alt="Fácil" class="icon-animated icon-rotate" style="width: 32px; height: 32px; vertical-align: middle;"></div>
+            <div class="benefit-content">
+              <h3>Fácil de preparar</h3>
+              <p>Leva menos de 5 minutos para fazer a receita completa</p>
+            </div>
+          </div>
+          
+          <div class="benefit-item">
+            <div class="benefit-icon"><img src="3.png" alt="Acessível" class="icon-animated icon-rotate" style="width: 32px; height: 32px; vertical-align: middle;"></div>
+            <div class="benefit-content">
+              <h3>Ingredientes acessíveis</h3>
+              <p>Tudo que você precisa provavelmente já está na sua cozinha</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O que você vai receber -->
+    <section class="section section-light">
+      <div class="container">
+        <h2 class="text-center mb-8">Tudo o que está incluído no seu e-book:</h2>
+        
+        <div class="ebook-content">
+          <div class="ebook-mockup">
+            <div class="ebook-image-placeholder">
+              <p><!-- IMPORTANTE: Substitua 'alarm_icon.png' pelo nome exato do seu arquivo de imagem do mockup (incluindo a extensão, como .png, .jpg, etc.) -->
+              <img src="DIETA SECRETA.png" alt="Mockup 3D do E-book" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"></p>
+            </div>
+          </div>
+          
+          <div class="ebook-features">
+            <div class="feature-item">
+              <span class="check-icon"><img src="4.png" alt="Check" class="icon-animated icon-pulse" style="width: 1.2em; height: 1.2em; vertical-align: -0.1em;"></span>
+              <p>Receita secreta passo a passo detalhada</p>
+            </div>
+            
+            <div class="feature-item">
+              <span class="check-icon"><img src="4.png" alt="Check" class="icon-animated icon-pulse" style="width: 1.2em; height: 1.2em; vertical-align: -0.1em;"></span>
+              <p>Plano alimentar completo para 14 dias</p>
+            </div>
+            
+            <div class="feature-item">
+              <span class="check-icon"><img src="4.png" alt="Check" class="icon-animated icon-pulse" style="width: 1.2em; height: 1.2em; vertical-align: -0.1em;"></span>
+              <p>Lista de compras semanal</p>
+            </div>
+            
+            <div class="feature-item">
+              <span class="check-icon"><img src="4.png" alt="Check" class="icon-animated icon-pulse" style="width: 1.2em; height: 1.2em; vertical-align: -0.1em;"></span>
+              <p>Guia de substituição de ingredientes</p>
+            </div>
+            
+            <div class="feature-item">
+              <span class="check-icon"><img src="4.png" alt="Check" class="icon-animated icon-pulse" style="width: 1.2em; height: 1.2em; vertical-align: -0.1em;"></span>
+              <p>Dicas para potencializar os resultados</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bônus -->
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-8">BÔNUS EXCLUSIVOS (Por Tempo Limitado)</h2>
+        
+        <div class="bonus-list">
+          <div class="bonus-item">
+            <div class="bonus-icon"><img src="6.png" alt="Bônus" class="icon-animated icon-pulse" style="width: 2.5em; height: 2.5em; vertical-align: middle;"></div>
+            <div class="bonus-content">
+              <h3>E-book de Receitas</h3>
+              <p>Várias receitas detox para limpar seu organismo e acelerar resultados</p>
+            </div>
+          </div>
+          
+          <div class="bonus-item">
+            <div class="bonus-icon"><img src="6.png" alt="Bônus" class="icon-animated icon-pulse" style="width: 2.5em; height: 2.5em; vertical-align: middle;"></div>
+            <div class="bonus-content">
+              <h3>Conteúdo Motivacional</h3>
+              <p>Tenha disponível no e-book conteúdos para motivar a você continuar.</p>
+            </div>
+          </div>
+          
+          <div class="bonus-item">
+            <div class="bonus-icon"><img src="6.png" alt="Bônus" class="icon-animated icon-pulse" style="width: 2.5em; height: 2.5em; vertical-align: middle;"></div>
+            <div class="bonus-content">
+              <h3>Suporte VIP</h3>
+              <p>Suporte 24h para você, com dúvidas e outros fatores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Garantia -->
+    <section class="section section-light">
+      <div class="container">
+        <h2 class="text-center mb-4">Garantia Incondicional de 7 Dias</h2>
+        
+        <div class="guarantee-content text-center">
+          <div class="guarantee-seal">
+            <!-- IMPORTANTE: Substitua 'selo-garantia-7-dias.png' pelo nome exato do seu arquivo de imagem do selo (incluindo a extensão, como .png, .jpg, etc.) -->
+            <img src="selo-garantia-7-dias.png" alt="Selo de Garantia" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
+          </div>
+          
+          <p class="guarantee-text">
+            Se você não amar os resultados ou não perceber mudanças nos primeiros dias, 
+            devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="section">
+      <div class="container text-center">
+        <h2 class="mb-4">Não perca mais tempo com dietas que não funcionam</h2>
+        
+        <div class="final-cta">
+          <div class="arrow"><img src="2.png" alt="Seta para baixo" class="icon-animated icon-bounce" style="width: 2em; height: 2em; vertical-align: middle;"></div>
+          <a href="#" class="btn-primary pulse">SIM! QUERO COMEÇAR MINHA TRANSFORMAÇÃO HOJE!</a>
+        </div>
+        
+        <p class="security-text mt-4">
+          Pagamento 100% seguro | Acesso imediato após a compra
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-light">
+      <div class="container">
+        <h2 class="text-center mb-8">Perguntas Frequentes</h2>
+        
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>Como vou acessar o e-book?</h3>
+            <p>Após a confirmação do pagamento, você receberá um email com o link para download do seu e-book e todos os bônus.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Quanto tempo leva para ver resultados?</h3>
+            <p>A maioria das pessoas começa a notar mudanças já nos primeiros 3 dias, com resultados mais expressivos após 7-14 dias de uso contínuo.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Funciona para qualquer pessoa?</h3>
+            <p>Sim! A Receita Secreta foi testada em mulheres de diferentes idades e tipos físicos, com resultados consistentes.</p>
+          </div>
+          
+          <div class="faq-item">
+            <h3>Preciso fazer exercícios junto?</h3>
+            <p>Não é obrigatório, mas incluímos dicas de exercícios leves que podem potencializar seus resultados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="section section-dark">
+      <div class="container">
+        <div class="footer-links text-center">
+          <a href="#" class="footer-link">Página Inicial</a> | 
+          <a href="#" class="footer-link">Comprar agora</a> | 
+          <a href="#" class="footer-link">Ver desconto</a>
+        </div>
+        
+        <p class="legal-text text-center mt-4">
+          Este produto não substitui o acompanhamento com profissionais de saúde. 
+          Resultados podem variar de pessoa para pessoa.
+        </p>
+        
+        <p class="contact-info text-center mt-2">
+          Suporte: dietasecretamenos7kg@gmail.com
+        </p>
+        
+        <p class="company-info text-center mt-2">
+          E-book disponível há mais de cinco anos, ajudando milhares de pessoas!
+        </p>
+      </div>
+    </footer>
+
+    <!-- Pop-up de Saída -->
+    <div class="exit-popup-overlay" id="exit-popup">
+      <div class="exit-popup-container">
+        <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
+        <div class="exit-popup-content">
+          <h2>ESPERE!</h2>
+          <h3>Não vá embora ainda...</h3>
+          <p>Queremos te oferecer um <strong>desconto especial de 80%</strong> se você fizer seu pedido agora!</p>
+          <div class="exit-popup-discount">
+            <span class="discount-value">80%</span>
+            <span class="discount-text">OFF</span>
+          </div>
+          <button class="exit-popup-cta pulse" onclick="closeExitPopup()">
+            QUERO APROVEITAR ESTE DESCONTO AGORA!
+          </button>
+          <p class="exit-popup-timer">Esta oferta expira em 5 minutos!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Contador regressivo
+    function startCountdown() {
+      let minutes = 10;
+      let seconds = 0;
+      const countdownElement = document.getElementById('countdown');
+      
+      const timer = setInterval(() => {
+        if (seconds > 0) {
+          seconds--;
+        } else if (minutes > 0) {
+          minutes--;
+          seconds = 59;
+        } else {
+          clearInterval(timer);
+        }
+        
+        const displayMinutes = minutes.toString().padStart(2, '0');
+        const displaySeconds = seconds.toString().padStart(2, '0');
+        countdownElement.textContent = `${displayMinutes}:${displaySeconds}`;
+      }, 1000);
+    }
+
+    // Contador de pessoas assistindo
+    function updateViewerCount() {
+      const viewerCountElement = document.getElementById('viewer-count');
+      let count = parseInt(viewerCountElement.textContent);
+      
+      setInterval(() => {
+        const random = Math.random();
+        if (random > 0.7) {
+          count++;
+        } else if (random < 0.3 && count > 10) {
+          count--;
+        }
+        viewerCountElement.textContent = count;
+      }, 30000);
+    }
+
+    // Pop-up de saída
+    function setupExitPopup() {
+      const exitPopup = document.getElementById('exit-popup');
+      
+      document.addEventListener('mouseleave', (e) => {
+        if (e.clientY <= 0 && !sessionStorage.getItem('popupShown')) {
+          exitPopup.style.display = 'flex';
+          sessionStorage.setItem('popupShown', 'true');
+        }
+      });
+    }
+
+    function closeExitPopup() {
+      const exitPopup = document.getElementById('exit-popup');
+      exitPopup.style.display = 'none';
+    }
+
+    // Efeito de fade-in nos elementos
+    function setupFadeIn() {
+      const sections = document.querySelectorAll('.section');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      sections.forEach(section => {
+        section.classList.add('fade-in');
+        observer.observe(section);
+      });
+    }
+
+    // Inicialização
+    document.addEventListener('DOMContentLoaded', () => {
+      startCountdown();
+      updateViewerCount();
+      setupExitPopup();
+      setupFadeIn();
+    });
+  </script>
+</body>
+</html>
+
